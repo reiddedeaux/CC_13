@@ -19,7 +19,13 @@ function addEmployeeCard(name, position){
 
     document.getElementById(`employeeContainer`).appendChild(card);
 
-    removeButton.addEventListener(`click`, function(event))
+    removeButton.addEventListener(`click`, function(event){
+
+    //Task 4 Employee Card Removal with Event Bubbling
+    console.log(`Remove button was selected`);
+    event.stopPropagation();
+    card.remove();
+    });
 }
 //task 3 Bulk update on Employee Cards
 function bulkUpdateEmployeeCards(){
