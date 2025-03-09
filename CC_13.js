@@ -11,7 +11,7 @@ function addEmployeeCard(name, position){
     removeButton.textContent = `Remove`;
     const editButton = document.createElement(`button`) //make edit button
     editButton.textContent = `Remove`;
-
+//Adds elements to card
     card.appendChild(heading);
     card.appendChild(paragraph);
     card.appendChild(editButton);
@@ -21,3 +21,13 @@ function addEmployeeCard(name, position){
 
     removeButton.addEventListener(`click`, function(event))
 }
+//task 3 Bulk update on Employee Cards
+function bulkUpdateEmployeeCards(){
+    const cards = document.querySelectorAll(`.employee-card`);
+    const cardArray = Array.from(cards);
+
+    cardArray.forEach(card => {
+        card.style.backgroundColor = `lightgreen`; 
+    }); //function for bulk updating cards
+}
+bulkUpdateEmployeeCards();//Able to use the bulk update function
